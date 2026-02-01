@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.pi1.HelloController">
+
+    <!-- Панель управления -->
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Start" onAction="#startServer"/>
+            <Button text="Stop" onAction="#stopServer"/>
+            <Label fx:id="stateLabel" text="Состояние: OFF"/>
+        </HBox>
+    </top>
+
+    <!-- Три рабочие панели -->
+    <center>
+        <GridPane hgap="10" vgap="10">
+
+            <VBox GridPane.columnIndex="0">
+                <Label text="Компонент 1 — Время"/>
+                <Pane fx:id="panel1" prefHeight="150"/>
+            </VBox>
+
+            <VBox GridPane.columnIndex="1">
+                <Label text="Компонент 2 — Будильник"/>
+                <Pane fx:id="panel2" prefHeight="150"/>
+            </VBox>
+
+            <VBox GridPane.columnIndex="2">
+                <Label text="Компонент 3 — Игра"/>
+                <Pane fx:id="panel3" prefHeight="150"/>
+            </VBox>
+
+        </GridPane>
+    </center>
+
+    <!-- Строка информации -->
+    <bottom>
+        <Label fx:id="timeLabel" text="Время: 0"/>
+    </bottom>
+
+</BorderPane>
